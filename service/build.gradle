@@ -8,7 +8,7 @@ plugins {
     id 'org.openapi.generator'
     id 'com.diffplug.spotless'
     id 'jacoco'
-    id "au.com.dius.pact" version "4.6.16"
+    id "au.com.dius.pact" version "4.6.17"
     id 'jvm-test-suite'
     id 'antlr'
 }
@@ -64,7 +64,7 @@ dependencies {
     implementation 'org.postgresql:postgresql'
     implementation 'org.webjars:webjars-locator-lite' // versioned by spring dependency management
     implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-csv'
-    implementation 'io.sentry:sentry-logback:8.1.0'
+    implementation 'io.sentry:sentry-logback:8.2.0'
     implementation 'net.logstash.logback:logstash-logback-encoder:8.0'
     implementation 'org.codehaus.janino:janino'
     implementation 'org.liquibase:liquibase-core'
@@ -72,7 +72,7 @@ dependencies {
     implementation 'org.ehcache:ehcache:3.10.8:jakarta'
     implementation 'org.hashids:hashids:1.0.3'
     implementation 'jakarta.ws.rs:jakarta.ws.rs-api'
-    implementation 'com.google.mug:mug:8.3'
+    implementation 'com.google.mug:mug:8.5'
     implementation 'org.apache.lucene:lucene-queryparser:9.12.1'
 
     // required by openapi-generated models and api interfaces
@@ -124,13 +124,13 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.junit.jupiter:junit-jupiter'
     testImplementation project(':client')
-    testImplementation 'au.com.dius.pact.provider:spring:4.6.16'
-    testImplementation 'au.com.dius.pact.consumer:junit5:4.6.16'
+    testImplementation 'au.com.dius.pact.provider:spring:4.6.17'
+    testImplementation 'au.com.dius.pact.consumer:junit5:4.6.17'
     testImplementation 'org.junit-pioneer:junit-pioneer:2.3.0'
     testImplementation 'org.awaitility:awaitility'
 
     // google bucket mock
-    testImplementation 'com.google.cloud:google-cloud-nio:0.127.30'
+    testImplementation 'com.google.cloud:google-cloud-nio:0.127.31'
 
     constraints {
         implementation('org.json:json:20250107') {
